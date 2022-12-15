@@ -34,6 +34,7 @@ function setup() {
 	
 	var myCanvas = createCanvas(canvasX, canvasY)
 	myCanvas.parent("#canvas")
+	textHeight = 0.05 * min(imageWidth, imageHeight)
 }
 
 function draw() {
@@ -56,6 +57,16 @@ function draw() {
 	imageMode(CENTER)
 	image(torch.img, torch.x, torch.y, 790 * imageScalar, 790 * imageScalar)
 	image(torchHolder, imageWidth / 8, imageHeight / 2, 109 * imageScalar, 45 * imageScalar)
+	pop()
+	
+	push()
+	fill(color(100, 100, 100))
+	textSize(textHeight)
+	stroke(0)
+	strokeWeight(5)
+	textAlign(CENTER)
+	textFont("courier")
+	text("You found a torch! Carry it with you and light the path.", imageWidth / 2, imageHeight - textHeight / 2)
 	pop()
 }
 
