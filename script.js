@@ -80,7 +80,7 @@ function mouseReleased() {
 	if (torchIsHeld) {
 		// Is the torch on the end?
 		if (dist(torch.x, torch.y, caveOpeningX, caveOpeningY) < 100 * imageScalar) {
-			window.open("https://www.google.com/","_self")
+			window.open("https://westernkiwi.github.io/Mind_Maze/","_self")
 		}
 		
 	}
